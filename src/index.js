@@ -1,18 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import App from './views/App'
 import * as serviceWorker from './serviceWorker'
 
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './views/Home'
 
+import GlobalStyles from './GlobalStyles'
+
 const Root = (
+	<>
 		<BrowserRouter>
 			<App>
 				<Route exact path="/" component={Home} />
 			</App>
 		</BrowserRouter>
+		<GlobalStyles />
+	</>
 )
 
 ReactDOM.render(Root, document.getElementById('root'))
