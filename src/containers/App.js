@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Header from '../commons/Header'
-import Body from '../commons/Body'
-import Footer from '../commons/Footer'
+import Header from '../shared/Header'
+import Body from '../shared/Body'
+import Footer from '../shared/Footer'
 
 import NavBar from '../components/NavBar'
 
