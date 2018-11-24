@@ -1,18 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './views/App'
 import * as serviceWorker from './serviceWorker'
 
-import { BrowserRouter, Route } from 'react-router-dom'
-import Home from './views/Home'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import GlobalStyles from './GlobalStyles'
+import App from './containers/App'
+import Home from './containers/Home'
+import PlacesList from './containers/PlacesList'
+import Error404 from './containers/Error404'
+
+import GlobalStyles from './commons/GlobalStyles'
 
 const Root = (
 	<>
 		<BrowserRouter>
 			<App>
-				<Route exact path="/" component={Home} />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route path="/list" component={PlacesList} />
+					<Route component={Error404} />
+				</Switch>
 			</App>
 		</BrowserRouter>
 		<GlobalStyles />
