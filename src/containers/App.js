@@ -6,6 +6,8 @@ import Header from '../commons/Header'
 import Body from '../commons/Body'
 import Footer from '../commons/Footer'
 
+import NavBar from '../components/NavBar'
+
 const Container = styled.div`
 	display: grid;
 	grid-template: 150px 1fr 100px/ 1fr;
@@ -18,7 +20,9 @@ const Container = styled.div`
 
 const App = ({ children }) => (
 	<Container>
-		<Header />
+		<Header>
+			<NavBar />
+		</Header>
 		<Body>{children}</Body>
 		<Footer />
 	</Container>
