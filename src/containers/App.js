@@ -11,10 +11,6 @@ import NavBar from '../components/NavBar'
 const Container = styled.div`
 	display: grid;
 	grid-template: 150px 1fr 100px/ 1fr;
-	grid-template-areas:
-		'header '
-		'body'
-		'footer';
 	height: 100vh;
 `
 
