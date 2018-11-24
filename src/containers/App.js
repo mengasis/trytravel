@@ -8,7 +8,12 @@ import Footer from '../commons/Footer'
 
 const Container = styled.div`
 	display: grid;
-	grid-template-rows: 100px auto 100px;
+	grid-template: 150px 1fr 100px/ 1fr;
+	grid-template-areas:
+		'header '
+		'body'
+		'footer';
+	height: 100vh;
 `
 
 const App = ({ children }) => (
