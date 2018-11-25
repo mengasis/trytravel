@@ -9,7 +9,7 @@ import Home from './containers/Home'
 import PlacesList from './containers/PlacesList'
 import Error404 from './containers/Error404'
 
-import GlobalStyles from './commons/GlobalStyles'
+import GlobalStyles from './shared/GlobalStyles'
 
 const Root = (
 	<>
