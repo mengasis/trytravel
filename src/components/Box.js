@@ -50,13 +50,13 @@ const Text = styled.span`
 	display: inline-block;
 `
 
-const Box = ({ image }) => (
+const Box = ({ title, image }) => (
 	<Container>
 		<Figure>
 			<Image src={image} />
 		</Figure>
 		<Overlay>
-			<Title>New York</Title>
+			<Title>{title}</Title>
 			<p>
 				<Text>150</Text>
 				<Text>50</Text>
@@ -65,6 +65,9 @@ const Box = ({ image }) => (
 	</Container>
 )
 
-Box.propTypes = { image: PropTypes.string.isRequired }
+Box.propTypes = {
+	image: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired
+}
 
 export default Box
