@@ -9,7 +9,7 @@ import NavBar from '../components/NavBar'
 
 const Container = styled.div`
 	display: grid;
-	grid-template: 150px 1fr 100px/ 1fr;
+	grid-template: 60px 1fr / 1fr;
 	height: 100vh;
 `
 

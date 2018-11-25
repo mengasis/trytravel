@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 const List = styled.ul`
-	background: #5dabcc;
-	grid-area: nav;
-
+	background: #6a4188;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,7 +14,6 @@ const List = styled.ul`
 `
 
 const Item = styled.li`
-	color: #000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -33,6 +30,7 @@ const Nav = styled(NavLink)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: white;
 
 	:hover {
 		opacity: 0.7;
