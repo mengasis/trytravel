@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import DynamicGrid from '../components/DynamicGrid'
 import Box from '../components/Box'
+import Title from '../shared/Title'
 
-import axios from 'axios'
-
-class PlacesList extends Component {
+class Masonry extends Component {
 	state = { images: [] }
 
 	async componentDidMount() {
@@ -17,21 +17,18 @@ class PlacesList extends Component {
 		})
 	}
 
-	setUrl = id =>
-		`https://picsum.photos/${Math.floor(Math.random() * 1000) + 100}/${Math.floor(
-			Math.random() * 1000
-		) + 100}?image=${id}`
+	setUrl = (id, height) => `https://picsum.photos/250/${height}?image=${id}`
 
 	render() {
-		console.log(this.state.images)
 		return (
 			<>
+				<Title>Masonry</Title>
 				<DynamicGrid>
 					{this.state.images.map((item, index) => (
 						<React.Fragment key={index}>
-							<Box image={this.setUrl(item[0].id)} level={1} />
-							<Box image={this.setUrl(item[1].id)} level={2} />
-							<Box image={this.setUrl(item[2].id)} level={3} />
+							<Box image={this.setUrl(item[0].id, 100)} level={1} />
+							<Box image={this.setUrl(item[1].id, 210)} level={2} />
+							<Box image={this.setUrl(item[2].id, 320)} level={3} />
 						</React.Fragment>
 					))}
 				</DynamicGrid>
@@ -40,4 +37,4 @@ class PlacesList extends Component {
 	}
 }
 
-export default PlacesList
+export default Masonry
