@@ -6,7 +6,6 @@ const Container = styled.div`
 	cursor: pointer;
 	position: relative;
 	display: block;
-	width: 300px;
 `
 
 const Figure = styled.figure`
@@ -14,7 +13,8 @@ const Figure = styled.figure`
 `
 
 const Image = styled.img`
-	width: 100%;
+	max-width: 100%;
+	width: 300px;
 	vertical-align: top;
 `
 
