@@ -5,13 +5,12 @@ import LazyLoad from 'react-lazyload'
 
 const Container = styled.div`
 	border-radius: 5px;
-	padding: 10px;
 	background: #f2f2f2;
 	grid-row-end: span ${({ level }) => level || 1};
 `
 
 const Image = styled.img`
-	width: 100%;
+	max-width: 100%;
 `
 const Box = ({ level, image }) => (
 	<LazyLoad height={100}>
