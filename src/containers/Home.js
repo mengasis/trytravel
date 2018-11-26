@@ -1,11 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+import SimpleGrid from '../components/SimpleGrid'
+import PortraitBox from '../components/PortraitBox'
+import places from '../data/places'
 
 const Home = () => {
 	return (
-		<div>
-			<span>HOME</span>
-		</div>
+		<>
+			<SimpleGrid>
+				{places.map((city, i) => (
+					<PortraitBox key={i} title={city.title} image={city.url} />
+				))}
+			</SimpleGrid>
+		</>
 	)
 }
 
