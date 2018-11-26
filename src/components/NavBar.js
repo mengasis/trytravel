@@ -38,7 +38,6 @@ const Nav = styled(NavLink)`
 `
 const styleActive = {
 	background: 'white',
-	fontWeight: 900,
 	color: 'black'
 }
 
@@ -53,7 +52,7 @@ class NavBar extends Component {
 				</Item>
 				<Item>
 					<Nav exact to="/list" activeStyle={styleActive}>
-						Listing
+						Masonry
 					</Nav>
 				</Item>
 			</List>

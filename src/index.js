@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import App from './containers/App'
 import Home from './containers/Home'
-import PlacesList from './containers/PlacesList'
+import Masonry from './containers/Masonry'
 import Error404 from './containers/Error404'
 
 import GlobalStyles from './shared/GlobalStyles'
@@ -17,7 +17,7 @@ const Root = (
 			<App>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/list" component={PlacesList} />
+					<Route path="/list" component={Masonry} />
 					<Route component={Error404} />
 				</Switch>
 			</App>
